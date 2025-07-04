@@ -27,9 +27,9 @@ pipeline {
        stage("Docker build"){
             steps {
 				sh 'docker version'
-				sh "docker build -t loksaieta/healthapp-eta-app:${BUILD_NUMBER} ."
+				sh "docker build -t ashoke0804/sa-ai-webapp:${BUILD_NUMBER} ."
 				sh 'docker image list'
-				sh "docker tag loksaieta/bankapp-eta-app:${BUILD_NUMBER} loksaieta/healthapp-eta-app:latest"
+				sh "docker tag ashoke0804/sa-ai-webapp:${BUILD_NUMBER} ashoke0804/sa-ai-webapp:latest"
             }
         }
 		stage('Login2DockerHub') {
@@ -41,7 +41,7 @@ pipeline {
 		stage('Push2DockerHub') {
 
 			steps {
-				sh "docker push loksaieta/healthapp-eta-app:latest"
+				sh "docker push ashoke0804/sa-ai-webapp:latest"
 			}
 		}
         stage('Deploy to Kubernetes Dev Environment') {

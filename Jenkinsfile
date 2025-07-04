@@ -14,7 +14,7 @@ pipeline {
         stage('SCM Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/StarAgileDevOpsTraining/star-agile-health-care.git'
+                git 'https://github.com/Apkumar-ux/star-agile-health-care.git'
                 //git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
             }
 		}

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: healthapp-eta-container
-        image: ashoke0804/healthapp-eta-app
+        image: ashoke0804/sa-ai-webapp
         ports:
         - containerPort: 8082
 ---
